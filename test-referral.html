@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral System Test - TrackWarranty</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .test-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .test-links {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .test-link {
+            display: block;
+            padding: 1rem;
+            background: #f3f4f6;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #374151;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s ease;
+        }
+        
+        .test-link:hover {
+            background: #e5e7eb;
+            transform: translateY(-1px);
+        }
+        
+        .test-link-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .test-link-url {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #6b7280;
+            word-break: break-all;
+        }
+        
+        .analytics-section {
+            background: #1f2937;
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .analytics-data {
+            background: #374151;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .clear-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .clear-btn:hover {
+            background: #dc2626;
+        }
+        
+        .current-data {
+            background: #059669;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .current-data h4 {
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .current-data pre {
+            margin: 0;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="text-align: center; color: #1f2937; margin-bottom: 2rem;">🛡️ TrackWarranty Referral System Test</h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">📋 Current Referral Data</h2>
+            <div id="currentData" class="current-data">
+                <h4>No referral data detected</h4>
+                <pre>Visit with referral parameters to see data here</pre>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🔗 Test Referral Links (GitHub Pages Compatible)</h2>
+            <p class="test-description">
+                Click these links to test different referral scenarios. On GitHub Pages, /invite/CODE URLs 
+                are handled by 404.html which redirects to invite.html with proper parameters.
+            </p>
+            
+            <div class="test-links">
+                <a href="/?code=TEST123&ref=john&utm_source=whatsapp" class="test-link">
+                    <div class="test-link-title">Basic Referral (Main Page)</div>
+                    <div class="test-link-url">/?code=TEST123&ref=john&utm_source=whatsapp</div>
+                </a>
+                
+                <a href="/invite/ABC123?ref=sarah&utm_source=instagram" class="test-link">
+                    <div class="test-link-title">Invite Page with Referrer</div>
+                    <div class="test-link-url">/invite/ABC123?ref=sarah&utm_source=instagram</div>
+                </a>
+                
+                <a href="/invite.html?code=XYZ789&ref=mike&utm_source=twitter&utm_campaign=viral" class="test-link">
+                    <div class="test-link-title">Full UTM Tracking</div>
+                    <div class="test-link-url">/invite.html?code=XYZ789&ref=mike&utm_source=twitter&utm_campaign=viral</div>
+                </a>
+                
+                <a href="/invite/DEF456" class="test-link">
+                    <div class="test-link-title">Simple Invite Code Only</div>
+                    <div class="test-link-url">/invite/DEF456</div>
+                </a>
+                
+                <a href="/?utm_source=email&utm_medium=newsletter&utm_campaign=launch" class="test-link">
+                    <div class="test-link-title">UTM Only (No Referral)</div>
+                    <div class="test-link-url">/?utm_source=email&utm_medium=newsletter&utm_campaign=launch</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">📱 Platform Detection Test</h2>
+            <p class="test-description">
+                Current platform detection:
+            </p>
+            <div id="platformInfo" style="background: #f3f4f6; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                <strong>Platform:</strong> <span id="detectedPlatform">Detecting...</span><br>
+                <strong>User Agent:</strong> <span id="userAgent" style="font-family: monospace; font-size: 0.8rem; word-break: break-all;"></span><br>
+                <strong>Package ID:</strong> app.trackwarranty (Android)<br>
+                <strong>Deep Link:</strong> trackwarranty://invite?code=ABC123
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🎯 Generate Test Links</h2>
+            <p class="test-description">Generate custom referral links for testing:</p>
+            
+            <form id="linkGenerator" style="display: grid; gap: 1rem;">
+                <input type="text" id="inviteCode" placeholder="Invite Code (e.g., ABC123)" style="padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px;">
+                <input type="text" id="referrerName" placeholder="Referrer Name (e.g., john)" style="padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px;">
+                <select id="utmSource" style="padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px;">
+                    <option value="">Select UTM Source</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="email">Email</option>
+                    <option value="direct">Direct</option>
+                </select>
+                <button type="button" onclick="generateTestLink()" style="padding: 0.75rem; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer;">
+                    Generate Link
+                </button>
+            </form>
+            
+            <div id="generatedLink" style="display: none; margin-top: 1rem; padding: 1rem; background: #ecfdf5; border: 1px solid #10b981; border-radius: 8px;">
+                <strong>Generated Link:</strong><br>
+                <input type="text" id="linkOutput" readonly style="width: 100%; padding: 0.5rem; margin-top: 0.5rem; font-family: monospace; border: 1px solid #d1d5db; border-radius: 4px;">
+                <button onclick="copyToClipboard()" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #10b981; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                    Copy Link
+                </button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🚀 GitHub Pages Deployment Test</h2>
+            <p class="test-description">
+                Test GitHub Pages specific functionality:
+            </p>
+            
+            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                <h4 style="margin-top: 0; color: #1f2937;">Deployment Checklist:</h4>
+                <div style="display: grid; gap: 0.75rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check1">
+                        <span>404.html file exists and handles /invite/CODE redirects</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check2">
+                        <span>invite.html loads properly with referral parameters</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check3">
+                        <span>Platform detection works on mobile devices</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check4">
+                        <span>Download links use correct package ID: app.trackwarranty</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check5">
+                        <span>UTM parameters preserved through redirects</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="check6">
+                        <span>Analytics tracking works properly</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div style="background: #1f2937; color: white; padding: 1.5rem; border-radius: 12px;">
+                <h4 style="margin-top: 0;">🔧 Quick GitHub Pages Setup:</h4>
+                <pre style="background: #374151; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; margin: 0;">git add .
+git commit -m "Add TrackWarranty referral system"
+git push origin main
+
+# Then enable GitHub Pages in repository settings</pre>
+                <p style="margin-bottom: 0; opacity: 0.8; margin-top: 1rem;">
+                    📖 See GITHUB_PAGES_SETUP.md for complete deployment instructions
+                </p>
+            </div>
+        </div>
+        
+        <div class="analytics-section">
+            <h2 style="margin-top: 0;">📊 Analytics Data</h2>
+            <p style="opacity: 0.8;">Real-time tracking data from localStorage:</p>
+            
+            <button onclick="refreshAnalytics()" style="background: #667eea; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; margin-bottom: 1rem;">
+                Refresh Data
+            </button>
+            
+            <button onclick="clearAnalytics()" class="clear-btn">
+                Clear Analytics
+            </button>
+            
+            <div id="analyticsData" class="analytics-data">
+                Loading analytics data...
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Test page specific functions
+        function updateCurrentData() {
+            const referralData = getReferralData();
+            const currentDataDiv = document.getElementById('currentData');
+            
+            if (referralData.inviteCode || referralData.referrerName || referralData.utmSource) {
+                currentDataDiv.innerHTML = `
+                    <h4>Active Referral Data</h4>
+                    <pre>${JSON.stringify(referralData, null, 2)}</pre>
+                `;
+            } else {
+                currentDataDiv.innerHTML = `
+                    <h4>No referral data detected</h4>
+                    <pre>Visit with referral parameters to see data here</pre>
+                `;
+            }
+        }
+        
+        function updatePlatformInfo() {
+            const platform = detectPlatform();
+            const userAgent = navigator.userAgent;
+            
+            document.getElementById('detectedPlatform').textContent = platform.toUpperCase();
+            document.getElementById('userAgent').textContent = userAgent;
+        }
+        
+        function generateTestLink() {
+            const inviteCode = document.getElementById('inviteCode').value;
+            const referrerName = document.getElementById('referrerName').value;
+            const utmSource = document.getElementById('utmSource').value;
+            
+            if (!inviteCode) {
+                alert('Please enter an invite code');
+                return;
+            }
+            
+            const link = generateReferralLink(inviteCode, referrerName, utmSource);
+            
+            document.getElementById('linkOutput').value = link;
+            document.getElementById('generatedLink').style.display = 'block';
+        }
+        
+        function copyToClipboard() {
+            const linkOutput = document.getElementById('linkOutput');
+            linkOutput.select();
+            document.execCommand('copy');
+            alert('Link copied to clipboard!');
+        }
+        
+        function refreshAnalytics() {
+            const analytics = JSON.parse(localStorage.getItem('trackwarranty_analytics') || '[]');
+            const referralData = JSON.parse(localStorage.getItem('trackwarranty_referral') || '{}');
+            
+            const data = {
+                referralData: referralData,
+                analyticsEvents: analytics.slice(-10) // Show last 10 events
+            };
+            
+            document.getElementById('analyticsData').textContent = JSON.stringify(data, null, 2);
+        }
+        
+        function clearAnalytics() {
+            localStorage.removeItem('trackwarranty_analytics');
+            localStorage.removeItem('trackwarranty_referral');
+            refreshAnalytics();
+            updateCurrentData();
+            alert('Analytics data cleared!');
+        }
+        
+        // Initialize test page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCurrentData();
+            updatePlatformInfo();
+            refreshAnalytics();
+            
+            // Refresh data every 5 seconds
+            setInterval(() => {
+                updateCurrentData();
+                refreshAnalytics();
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

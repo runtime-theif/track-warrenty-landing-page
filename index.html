@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJLWPKL409"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJLWPKL409');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Losing Money on Expired Warranties | TrackWarranty - AI Warranty Tracker</title>
@@ -45,11 +54,12 @@
     </script>
 </head>
 <body>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">🛡️</span>
+                <img src="logo.png" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
                 <span class="logo-text">TrackWarranty</span>
             </div>
             <div class="nav-menu">
@@ -102,21 +112,27 @@
 
                 <div class="hero-cta">
                     <div class="hero-download-buttons">
-                        <a href="https://apps.apple.com/app/trackwarranty" target="_blank" class="hero-app-btn hover-scale">
-                            <img src="app-store.svg" 
-                                 alt="Download on the App Store" 
-                                 height="100"
-                                 class="store-badge"
-                            >
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.trackwarranty" target="_blank" class="hero-app-btn hover-scale">
-                            <img src="playstore.svg" 
-                                 alt="Get it on Google Play" 
-                                 height="100"
-                                 class="store-badge"
-                            >
-                        </a>
+                        <div class="app-download-container">
+                            <!-- Play Store First (Active) -->
+                            <a href="https://play.google.com/store/apps/details?id=app.trackwarranty" 
+                               target="_blank" 
+                               class="download-btn-active">
+                                <img src="playstore.svg" 
+                                     alt="Get it on Google Play" 
+                                     class="store-badge-native">
+                                <div class="download-status-badge active">Available Now</div>
+                            </a>
+                            
+                            <!-- App Store Second (Coming Soon) -->
+                            <div class="download-btn-inactive">
+                                <img src="app-store.svg" 
+                                     alt="Coming Soon on App Store" 
+                                     class="store-badge-native disabled">
+                                <div class="download-status-badge inactive">Coming Soon</div>
+                            </div>
+                        </div>
                     </div>
+                   
                     <style>
                         .hover-scale {
                             transition: transform 0.2s ease;
@@ -133,42 +149,33 @@
                             justify-content: center;
                             margin-top: 2rem;
                         }
+                        
+                        /* Enhanced hover effects for available downloads */
+                        .hero-app-btn.available:hover {
+                            transform: scale(1.08) translateY(-2px);
+                            filter: brightness(1.1);
+                        }
+                        
+                        /* Subtle pulse for coming soon items */
+                        .ios-coming-soon:hover {
+                            transform: scale(1.02);
+                            opacity: 0.8;
+                        }
+                        
+                        /* Better focus states for accessibility */
+                        .hero-app-btn:focus,
+                        .download-btn-wrapper:focus {
+                            outline: 3px solid #667eea;
+                            outline-offset: 2px;
+                            border-radius: 12px;
+                        }
+                        
                     </style>
                 </div>
             </div>
 
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="app-demo">
-                            <div class="demo-header">
-                                <span class="demo-time">9:41</span>
-                                <span class="demo-battery">🔋</span>
-                            </div>
-                            <div class="demo-content">
-                                <div class="demo-title">Your Warranties</div>
-                                <div class="warranty-item urgent">
-                                    <div class="warranty-icon">💻</div>
-                                    <div class="warranty-info">
-                                        <div class="warranty-name">MacBook Pro</div>
-                                        <div class="warranty-status">Expires in 12 days!</div>
-                                        <div class="warranty-value">Worth ₹15,000</div>
-                                    </div>
-                                    <div class="warranty-alert">⚠️</div>
-                                </div>
-                                <div class="warranty-item safe">
-                                    <div class="warranty-icon">📱</div>
-                                    <div class="warranty-info">
-                                        <div class="warranty-name">iPhone 15</div>
-                                        <div class="warranty-status">8 months left</div>
-                                        <div class="warranty-value">Worth ₹25,000</div>
-                                    </div>
-                                    <div class="warranty-status-icon">✅</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="app-screenshot.png" alt="TrackWarranty App Screenshot" class="phone-mockup">
                 <div class="floating-elements">
                     <div class="floating-receipt">📄</div>
                     <div class="floating-money">💰</div>
@@ -181,67 +188,127 @@
     <!-- Problem Section -->
     <section id="problem" class="problem-section">
         <div class="container">
-            <div class="section-header">
-                <h2>The $5,000 Problem Nobody Talks About</h2>
-                <p class="section-subtitle">
-                    The average household loses $5,000+ over their lifetime 
+            <div class="problem-header">
+                <div class="problem-icon-large">💸</div>
+                <h2 class="problem-title">The $1,000 Problem Nobody Talks About</h2>
+                <p class="problem-subtitle">
+                    The average household loses <span class="highlight-amount">$1,000+</span> over their lifetime 
                     due to expired warranties and lost receipts.
                 </p>
-            </div>
-
-            <div class="problem-stories">
-                <div class="story-card">
-                    <div class="story-header">
-                        <span class="story-icon">😫</span>
-                        <h3>The Laptop Incident</h3>
+                <div class="problem-shocking-stat">
+                    <div class="shocking-stat-visual">
+                        <div class="money-lost-animation">
+                            <span class="money-icon">💰</span>
+                            <span class="money-icon">💰</span>
+                            <span class="money-icon">💰</span>
+                        </div>
+                        <div class="stat-large">$47 Billion</div>
+                        <div class="stat-description">lost annually on expired warranties worldwide</div>
                     </div>
-                    <p>
-                        Your 11-month-old laptop suddenly won't charge. Repair shop quotes $300. 
-                        You search everywhere for the warranty card... found it! But wait - 
-                        warranty expired 3 weeks ago. You pay $300.
-                    </p>
-                    <div class="story-impact">Cost: $300 that could have been $0</div>
-                </div>
-
-                <div class="story-card">
-                    <div class="story-header">
-                        <span class="story-icon">🤦‍♂️</span>
-                        <h3>The Washing Machine Drama</h3>
-                    </div>
-                    <p>
-                        Your washing machine breaks down. You remember buying extended warranty 
-                        but can't find the receipt. Service center says "No receipt, no warranty." 
-                        You pay $450 for repairs.
-                    </p>
-                    <div class="story-impact">Cost: $450 + hours of frustration</div>
-                </div>
-
-                <div class="story-card">
-                    <div class="story-header">
-                        <span class="story-icon">😤</span>
-                        <h3>The Smartphone Nightmare</h3>
-                    </div>
-                    <p>
-                        Phone screen cracks. You're sure it's under warranty but can't remember 
-                        when you bought it. Email receipt is buried in 10,000+ emails. 
-                        You give up and pay $200.
-                    </p>
-                    <div class="story-impact">Cost: $200 + wasted time searching</div>
                 </div>
             </div>
 
-            <div class="problem-stats">
-                <div class="stat-item">
-                    <span class="stat-number">73%</span>
-                    <span class="stat-label">of people have lost warranty cards</span>
+            <div class="problem-stories-modern">
+                <div class="story-card-modern">
+                    <div class="story-visual">
+                        <div class="story-emoji">💻</div>
+                        <div class="story-timeline">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-dot expired"></div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Laptop Incident</h3>
+                        <p class="story-description">
+                            Your 11-month-old laptop suddenly won't charge. Repair shop quotes $300. 
+                            You search everywhere for the warranty card... found it! But wait - 
+                            <span class="text-danger">warranty expired 3 weeks ago</span>.
+                        </p>
+                        <div class="story-cost">
+                            <span class="cost-label">You paid:</span>
+                            <span class="cost-amount">$300</span>
+                            <span class="cost-could-be">Could have been: $0</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">$47B</span>
-                    <span class="stat-label">lost annually on expired warranties</span>
+
+                <div class="story-card-modern">
+                    <div class="story-visual">
+                        <div class="story-emoji">🧺</div>
+                        <div class="story-timeline">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-dot lost"></div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Washing Machine Drama</h3>
+                        <p class="story-description">
+                            Your washing machine breaks down. You remember buying extended warranty 
+                            but can't find the receipt. Service center says 
+                            <span class="text-danger">"No receipt, no warranty."</span>
+                        </p>
+                        <div class="story-cost">
+                            <span class="cost-label">You paid:</span>
+                            <span class="cost-amount">$450</span>
+                            <span class="cost-could-be">+ hours of frustration</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">6 hours</span>
-                    <span class="stat-label">average time spent searching for receipts</span>
+
+                <div class="story-card-modern">
+                    <div class="story-visual">
+                        <div class="story-emoji">📱</div>
+                        <div class="story-timeline">
+                            <div class="timeline-dot active"></div>
+                            <div class="timeline-line"></div>
+                            <div class="timeline-dot buried"></div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">The Smartphone Nightmare</h3>
+                        <p class="story-description">
+                            Phone screen cracks. You're sure it's under warranty but can't remember 
+                            when you bought it. <span class="text-danger">Email receipt buried in 10,000+ emails</span>. 
+                            You give up.
+                        </p>
+                        <div class="story-cost">
+                            <span class="cost-label">You paid:</span>
+                            <span class="cost-amount">$200</span>
+                            <span class="cost-could-be">+ wasted time searching</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="problem-stats-modern">
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-icon">😰</div>
+                        <div class="stat-number">73%</div>
+                        <div class="stat-label">of people have lost warranty cards</div>
+                    </div>
+                    <div class="stat-card highlighted">
+                        <div class="stat-icon">💸</div>
+                        <div class="stat-number">$47B</div>
+                        <div class="stat-label">lost annually on expired warranties</div>
+                        <div class="stat-highlight">That's $150 per person!</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-number">6 hours</div>
+                        <div class="stat-label">average time spent searching for receipts</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="problem-solution-bridge">
+                <div class="bridge-content">
+                    <p class="bridge-text">
+                        <span class="bridge-emphasis">But what if this never happened to you again?</span>
+                    </p>
+                    <div class="bridge-arrow">↓</div>
                 </div>
             </div>
         </div>
@@ -501,16 +568,23 @@
                 </div>
 
                 <div class="download-buttons-main">
-                    <a href="https://apps.apple.com/app/trackwarranty" target="_blank" class="app-store-btn">
-                        <img src="app-store.svg" 
-                             alt="Download on the App Store" 
-                             height="60">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.trackwarranty" target="_blank" class="app-store-btn">
-                        <img src="playstore.svg" 
-                             alt="Get it on Google Play" 
-                             height="60">
-                    </a>
+                    <div class="download-section-container">
+                        <!-- Play Store First (Active) -->
+                        <a href="https://play.google.com/store/apps/details?id=app.trackwarranty" target="_blank" class="download-btn-active">
+                            <img src="playstore.svg" 
+                                 alt="Get it on Google Play" 
+                                 class="store-badge-native">
+                            <div class="download-status-badge active">Available Now</div>
+                        </a>
+                        
+                        <!-- App Store Second (Coming Soon) -->
+                        <div class="download-btn-inactive">
+                            <img src="app-store.svg" 
+                                 alt="Coming Soon on App Store" 
+                                 class="store-badge-native disabled">
+                            <div class="download-status-badge inactive">Coming Soon</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="download-features">
@@ -538,19 +612,26 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span class="logo-icon">🛡️</span>
+                        <img src="logo.png" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
                         <span class="logo-text">TrackWarranty</span>
                     </div>
                     <p class="footer-tagline">
                         The smart way to track warranties and never lose money on expired coverage again.
                     </p>
                     <div class="footer-download">
-                        <a href="https://apps.apple.com/app/trackwarranty" target="_blank" class="footer-app-btn">
-                            <img src="app-store.svg" alt="Download on App Store" height="40">
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.trackwarranty" target="_blank" class="footer-app-btn">
-                            <img src="playstore.svg" alt="Get it on Google Play" height="40">
-                        </a>
+                        <div class="footer-download-container">
+                            <!-- Play Store First (Active) -->
+                            <a href="https://play.google.com/store/apps/details?id=app.trackwarranty" target="_blank" class="download-btn-active footer-size">
+                                <img src="playstore.svg" alt="Get it on Google Play" class="store-badge-native footer">
+                                <div class="download-status-badge active small">Available</div>
+                            </a>
+                            
+                            <!-- App Store Second (Coming Soon) -->
+                            <div class="download-btn-inactive footer-size">
+                                <img src="app-store.svg" alt="Coming Soon on App Store" class="store-badge-native footer disabled">
+                                <div class="download-status-badge inactive small">Soon</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

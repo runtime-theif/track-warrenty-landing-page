@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Download Badge Test - TrackWarranty</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+            background: #f8fafc;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+        }
+        
+        .test-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .badge-test {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .badge-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .badge-label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.875rem;
+        }
+        
+        .status {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        .status.success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status.error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .implementation-test {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .impl-card {
+            padding: 1.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        
+        .impl-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 style="text-align: center; color: #1f2937; margin-bottom: 2rem;">🛡️ SVG Download Badge Rendering Test</h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">📱 Raw SVG Files Test</h2>
+            <p style="color: #6b7280; margin-bottom: 2rem;">Testing direct SVG file access and rendering quality:</p>
+            
+            <div class="badge-test">
+                <div class="badge-group">
+                    <div class="badge-label">App Store SVG</div>
+                    <img src="app-store.svg" alt="App Store Badge" height="60" style="border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <div class="status success">✅ Loaded Successfully</div>
+                </div>
+                
+                <div class="badge-group">
+                    <div class="badge-label">Play Store SVG</div>
+                    <img src="playstore.svg" alt="Play Store Badge" height="60" style="border: 1px solid #e5e7eb; border-radius: 8px;">
+                    <div class="status success">✅ Loaded Successfully</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🎨 Current Implementation Test</h2>
+            <p style="color: #6b7280; margin-bottom: 2rem;">Testing how badges render with current CSS styling:</p>
+            
+            <div class="implementation-test">
+                <div class="impl-card">
+                    <div class="impl-title">Hero Section Style</div>
+                    <div class="app-download-container">
+                        <div class="download-btn-wrapper ios-coming-soon">
+                            <img src="app-store.svg" alt="Coming Soon on App Store" height="100" class="store-badge disabled">
+                            <div class="coming-soon-overlay">
+                                <span class="coming-soon-text">Coming Soon</span>
+                            </div>
+                        </div>
+                        <a href="#" class="hero-app-btn hover-scale available">
+                            <img src="playstore.svg" alt="Get it on Google Play" height="100" class="store-badge">
+                            <div class="available-badge">Available Now</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="impl-card">
+                    <div class="impl-title">Download Section Style</div>
+                    <div class="download-section-container">
+                        <div class="download-btn-wrapper ios-coming-soon">
+                            <img src="app-store.svg" alt="Coming Soon on App Store" height="60" class="store-badge disabled">
+                            <div class="coming-soon-overlay small">
+                                <span class="coming-soon-text">Coming Soon</span>
+                            </div>
+                        </div>
+                        <a href="#" class="app-store-btn available">
+                            <img src="playstore.svg" alt="Get it on Google Play" height="60">
+                            <div class="available-badge small">Available Now</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="impl-card">
+                    <div class="impl-title">Footer Style</div>
+                    <div class="footer-download-container">
+                        <div class="download-btn-wrapper ios-coming-soon footer">
+                            <img src="app-store.svg" alt="Coming Soon on App Store" height="40" class="store-badge disabled">
+                            <div class="coming-soon-overlay footer">
+                                <span class="coming-soon-text">Soon</span>
+                            </div>
+                        </div>
+                        <a href="#" class="footer-app-btn available">
+                            <img src="playstore.svg" alt="Get it on Google Play" height="40">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="impl-card">
+                    <div class="impl-title">Invite Page Style</div>
+                    <div class="download-buttons">
+                        <div class="download-btn-wrapper ios-coming-soon">
+                            <img src="app-store.svg" alt="Coming Soon on App Store" class="store-badge disabled" style="height: 50px;">
+                            <div class="coming-soon-overlay">
+                                <span class="coming-soon-text">Coming Soon</span>
+                            </div>
+                        </div>
+                        <a href="#" class="download-btn available">
+                            <img src="playstore.svg" alt="Get it on Google Play" style="height: 50px;">
+                            <div class="available-badge small">Available Now</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">🔍 Cross-Browser Compatibility</h2>
+            <p style="color: #6b7280; margin-bottom: 2rem;">SVG rendering optimizations applied:</p>
+            
+            <div style="background: #f3f4f6; padding: 1.5rem; border-radius: 8px; font-family: monospace; font-size: 0.875rem;">
+                ✅ image-rendering: auto, crisp-edges, -webkit-optimize-contrast<br>
+                ✅ object-fit: contain<br>
+                ✅ -webkit-font-smoothing: antialiased<br>
+                ✅ -moz-osx-font-smoothing: grayscale<br>
+                ✅ Safari-specific: transform: translateZ(0), backface-visibility: hidden<br>
+                ✅ Firefox-specific: image-rendering: crisp-edges<br>
+                ✅ Flexible sizing with max-width constraints<br>
+                ✅ Proper flex-shrink: 0 to prevent compression
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1rem; background: #ecfdf5; border: 1px solid #10b981; border-radius: 8px;">
+                <strong style="color: #065f46;">✅ All Pages Updated:</strong>
+                <ul style="margin: 0.5rem 0 0 1rem; color: #047857;">
+                    <li>index.html - ✅ Using local SVGs with iOS Coming Soon</li>
+                    <li>partnership.html - ✅ Updated to match main page</li>
+                    <li>privacy.html - ✅ Updated to match main page</li>
+                    <li>terms.html - ✅ Updated to match main page</li>
+                    <li>invite.html - ✅ Dynamic insertion with proper styling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Test SVG loading
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[src$=".svg"]');
+            let loadCount = 0;
+            let totalImages = images.length;
+            
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    loadCount++;
+                    console.log(`✅ SVG loaded: ${this.src}`);
+                    
+                    if (loadCount === totalImages) {
+                        console.log(`🎉 All ${totalImages} SVG files loaded successfully!`);
+                    }
+                });
+                
+                img.addEventListener('error', function() {
+                    console.error(`❌ SVG failed to load: ${this.src}`);
+                    
+                    // Update status to error
+                    const parent = this.closest('.badge-group');
+                    if (parent) {
+                        const status = parent.querySelector('.status');
+                        if (status) {
+                            status.className = 'status error';
+                            status.innerHTML = '❌ Failed to Load';
+                        }
+                    }
+                });
+            });
+            
+            console.log(`📊 Testing ${totalImages} SVG download badges...`);
+        });
+    </script>
+</body>
+</html>

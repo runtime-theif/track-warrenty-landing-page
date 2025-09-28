@@ -549,14 +549,421 @@ body {
 }
 
 /* ========================================
-   PROBLEM SECTION
+   PROBLEM SECTION - REDESIGNED
    ======================================== */
 
 .problem-section {
     padding: var(--space-24) 0;
-    background: var(--gray-50);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
 }
 
+.problem-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="problem-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(148,163,184,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23problem-grid)"/></svg>');
+    opacity: 0.4;
+}
+
+.problem-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+    position: relative;
+    z-index: 1;
+}
+
+.problem-icon-large {
+    font-size: 4rem;
+    margin-bottom: var(--space-4);
+    animation: moneyFloat 3s ease-in-out infinite;
+}
+
+@keyframes moneyFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.problem-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+    line-height: 1.2;
+}
+
+.problem-subtitle {
+    font-size: 1.25rem;
+    color: var(--neutral-600);
+    max-width: 600px;
+    margin: 0 auto var(--space-8);
+    line-height: 1.6;
+}
+
+.highlight-amount {
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.problem-shocking-stat {
+    margin: var(--space-12) 0;
+}
+
+.shocking-stat-visual {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    border: 2px solid #fca5a5;
+    border-radius: 20px;
+    padding: var(--space-8);
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.money-lost-animation {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: var(--space-4);
+}
+
+.money-icon {
+    font-size: 2rem;
+    animation: moneyDrop 2s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+}
+
+.money-icon:nth-child(1) { --delay: 0s; }
+.money-icon:nth-child(2) { --delay: 0.3s; }
+.money-icon:nth-child(3) { --delay: 0.6s; }
+
+@keyframes moneyDrop {
+    0%, 100% { transform: translateY(0px) scale(1); opacity: 1; }
+    50% { transform: translateY(15px) scale(0.9); opacity: 0.7; }
+}
+
+.stat-large {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+    color: #7f1d1d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.problem-stories-modern {
+    display: grid;
+    gap: var(--space-8);
+    margin: var(--space-16) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.story-card-modern {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-6);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ef4444, #dc2626);
+}
+
+.story-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.story-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.story-emoji {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-2);
+}
+
+.story-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+}
+
+.timeline-dot.active {
+    background: #10b981;
+    border-color: #059669;
+}
+
+.timeline-dot.expired {
+    background: #ef4444;
+    border-color: #dc2626;
+}
+
+.timeline-dot.lost {
+    background: #f59e0b;
+    border-color: #d97706;
+}
+
+.timeline-dot.buried {
+    background: #6b7280;
+    border-color: #4b5563;
+}
+
+.timeline-line {
+    width: 2px;
+    height: 36px;
+    background: linear-gradient(to bottom, #10b981, #ef4444);
+    margin: 2px 0;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.story-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--neutral-900);
+    margin: 0;
+}
+
+.story-description {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.text-danger {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.story-cost {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    background: #fef2f2;
+    border-radius: 8px;
+    border-left: 4px solid #ef4444;
+}
+
+.cost-label {
+    font-size: 0.875rem;
+    color: #7f1d1d;
+    font-weight: 600;
+}
+
+.cost-amount {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #dc2626;
+}
+
+.cost-could-be {
+    font-size: 0.875rem;
+    color: #059669;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.problem-stats-modern {
+    margin: var(--space-16) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: var(--space-6);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card.highlighted {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    border-color: #fca5a5;
+    transform: scale(1.05);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--neutral-900);
+    margin-bottom: var(--space-2);
+}
+
+.stat-card.highlighted .stat-number {
+    color: #dc2626;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.stat-highlight {
+    margin-top: var(--space-2);
+    font-size: 0.8rem;
+    color: #7f1d1d;
+    font-weight: 600;
+    background: rgba(220, 38, 38, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.problem-solution-bridge {
+    margin: var(--space-16) 0 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bridge-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.bridge-text {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-4);
+}
+
+.bridge-emphasis {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.bridge-arrow {
+    font-size: 2rem;
+    color: #667eea;
+    animation: bounceDown 2s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+}
+
+/* Responsive Design for Problem Section */
+@media (max-width: 768px) {
+    .problem-title {
+        font-size: 2rem;
+    }
+    
+    .problem-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .problem-icon-large {
+        font-size: 3rem;
+    }
+    
+    .story-card-modern {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-4);
+    }
+    
+    .story-visual {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .story-timeline {
+        height: auto;
+        flex-direction: row;
+        width: 60px;
+    }
+    
+    .timeline-line {
+        width: 36px;
+        height: 2px;
+        margin: 0 2px;
+    }
+    
+    .cost-could-be {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .stats-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .stat-card.highlighted {
+        transform: none;
+    }
+}
+
+/* Legacy styles for backward compatibility */
 .problem-stories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -625,14 +1032,14 @@ body {
     gap: var(--space-2);
 }
 
-.stat-number {
+.stat-item .stat-number {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary-600);
     line-height: 1;
 }
 
-.stat-label {
+.stat-item .stat-label {
     color: var(--gray-600);
     font-weight: 500;
 }
@@ -1405,6 +1812,25 @@ body {
 }
 
 /* ========================================
+   REFERRAL ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.referral-badge {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* ========================================
    DOWNLOAD SECTION
    ======================================== */
 
@@ -1420,6 +1846,225 @@ body {
     justify-content: center;
     gap: var(--space-6);
     margin: var(--space-8) 0;
+}
+
+.app-download-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* GitHub Pages Compatible Download Buttons */
+.download-btn-active,
+.download-btn-inactive {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+   
+}
+
+.download-btn-active {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-btn-active:hover {
+    transform: translateY(-3px) scale(1.05);
+    
+}
+
+.download-btn-inactive {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.download-btn-inactive:hover {
+    transform: translateY(-1px);
+}
+
+/* Native SVG Badge Sizing */
+.store-badge-native {
+    /* Standard app store badge dimensions */
+    width: 180px;
+    height: auto;
+    max-width: 180px;
+    
+    /* GitHub Pages compatible rendering */
+    display: block;
+    object-fit: contain;
+    image-rendering: auto;
+    
+    /* Smooth rendering across browsers */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Proper aspect ratio maintenance */
+    aspect-ratio: auto;
+    
+    /* Enhanced drop shadow */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.store-badge-native.disabled {
+    opacity: 0.6;
+    filter: grayscale(30%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Download Status Badges */
+.download-status-badge {
+    position: absolute;
+    top: 2px;
+    right: 32px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.download-status-badge.active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    animation: pulse-active 2s infinite;
+}
+
+.download-status-badge.inactive {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+@keyframes pulse-active {
+    0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+    }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+}
+
+/* Footer Size Variations */
+.store-badge-native.footer {
+    width: 120px;
+    max-width: 120px;
+}
+
+.download-status-badge.small {
+    padding: 3px 6px;
+    font-size: 8px;
+    border-radius: 10px;
+    top: 2px;
+    right: 32px;
+}
+
+/* Footer Download Container */
+.footer-download-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-section-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-download-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.download-btn-wrapper.ios-coming-soon {
+    cursor: not-allowed;
+}
+
+.store-badge.disabled {
+    opacity: 0.6;
+    filter: grayscale(40%);
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(239, 68, 68, 0.95);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.coming-soon-overlay.small {
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 16px;
+}
+
+.coming-soon-overlay.footer {
+    padding: 3px 8px;
+    font-size: 10px;
+    border-radius: 12px;
+}
+
+.available-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.available-badge.small {
+    padding: 3px 6px;
+    font-size: 9px;
+    border-radius: 10px;
+    top: -6px;
+    right: -6px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.hero-app-btn.available,
+.app-store-btn.available,
+.footer-app-btn.available {
+    position: relative;
 }
 
 .hero-app-btn,
@@ -1447,6 +2092,56 @@ body {
     height: 60px;
     width: auto;
     max-width: 200px;
+}
+
+/* SVG Download Badge Rendering Improvements */
+.hero-app-btn img,
+.app-store-btn img,
+.footer-app-btn img,
+.download-btn img,
+.store-badge {
+    /* Ensure proper SVG rendering across browsers */
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    
+    /* Prevent SVG scaling issues */
+    max-height: none;
+    object-fit: contain;
+    
+    /* Smooth rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Ensure proper display */
+    vertical-align: middle;
+    
+    /* Fix any potential flex issues */
+    flex-shrink: 0;
+}
+
+/* Fix for Safari SVG rendering */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .hero-app-btn img,
+    .app-store-btn img,
+    .footer-app-btn img,
+    .download-btn img,
+    .store-badge {
+        image-rendering: -webkit-optimize-contrast;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}
+
+/* Fix for Firefox SVG rendering */
+@-moz-document url-prefix() {
+    .hero-app-btn img,
+    .app-store-btn img,
+    .footer-app-btn img,
+    .download-btn img,
+    .store-badge {
+        image-rendering: crisp-edges;
+    }
 }
 
 .download-features {
@@ -3943,6 +4638,65 @@ body {
 
 .slide-in-right {
     animation: slideInFromRight 0.6s ease-out;
+}
+
+/* ========================================
+   ADDITIONAL MOBILE RESPONSIVE IMPROVEMENTS
+   ======================================== */
+
+@media (max-width: 640px) {
+    .app-download-container {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    
+    .download-section-container {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    
+    .footer-download-container {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    /* Mobile SVG sizing */
+    .store-badge-native {
+        width: 160px;
+        max-width: 160px;
+    }
+    
+    .store-badge-native.footer {
+        width: 100px;
+        max-width: 100px;
+    }
+    
+    /* Mobile status badges */
+    .download-status-badge {
+        font-size: 8px;
+        padding: 2px 5px;
+        top: -5px;
+        right: -5px;
+    }
+    
+    .download-status-badge.small {
+        font-size: 7px;
+        padding: 2px 4px;
+        top: -4px;
+        right: -4px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
 }
 
 /* ========================================
