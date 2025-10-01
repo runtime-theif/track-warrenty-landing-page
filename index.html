@@ -11,7 +11,9 @@
     gtag('config', 'G-BJLWPKL409');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#4f46e5">
     <title>Stop Losing Money on Expired Warranties | TrackWarranty - AI Warranty Tracker</title>
     <meta name="description" content="That expensive gadget warranty you forgot about? We'll help you remember. TrackWarranty's AI scans receipts, tracks expiry dates, and alerts you before it's too late. Free download.">
     <meta name="keywords" content="warranty tracker app, receipt scanner OCR, warranty claims money, product warranty reminder, receipt organizer, warranty expiry alerts, warranty management app">
@@ -19,15 +21,27 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Stop Losing Money on Expired Warranties - TrackWarranty">
     <meta property="og:description" content="AI-powered warranty tracking that turns forgotten receipts into money saved. Free app for iOS & Android.">
-    <meta property="og:image" content="https://trackwarranty.app/og-image.png">
+    <meta property="og:image" content="https://trackwarranty.app/preview.jpg">
     <meta property="og:url" content="https://trackwarranty.app">
     <meta property="og:type" content="website">
-    
+    <meta property="og:site_name" content="TrackWarranty">
+    <!-- Preview Image -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TrackWarranty App Preview - Never lose money on expired warranties again">
+    <meta property="og:image:type" content="image/jpeg">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Stop Losing Money on Expired Warranties">
     <meta name="twitter:description" content="AI warranty tracking that saves you money. Free download.">
-    <meta name="twitter:image" content="https://trackwarranty.app/og-image.png">
+    <meta name="twitter:image" content="https://trackwarranty.app/preview.jpg">
+    <meta name="twitter:image:alt" content="TrackWarranty App Preview - Never lose money on expired warranties again">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="logo.jpg" as="image">
+    <link rel="preload" href="app-screenshot.png" as="image">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -35,6 +49,8 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -49,6 +65,56 @@
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "500"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "TrackWarranty",
+            "url": "https://trackwarranty.app"
+        },
+        "url": "https://trackwarranty.app",
+        "screenshot": "https://trackwarranty.app/app-screenshot.png",
+        "datePublished": "2024-01-01",
+        "dateModified": "2025-01-27"
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TrackWarranty",
+        "url": "https://trackwarranty.app",
+        "logo": "https://trackwarranty.app/logo.jpg",
+        "description": "AI-powered warranty tracking app that helps users never lose money on expired warranties",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "trackwarrantyapp@gmail.com",
+            "contactType": "customer service"
+        },
+        "sameAs": [
+            "https://play.google.com/store/apps/details?id=app.trackwarranty"
+        ]
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TrackWarranty",
+        "url": "https://trackwarranty.app",
+        "description": "Stop losing money on expired warranties. TrackWarranty's AI scans receipts, tracks expiry dates, and alerts you before it's too late.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://trackwarranty.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
         }
     }
     </script>
@@ -59,7 +125,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="logo.png" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
+                <img src="logo.jpg" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
                 <span class="logo-text">TrackWarranty</span>
             </div>
             <div class="nav-menu">
@@ -72,6 +138,16 @@
                 <span></span>
                 <span></span>
             </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://trackwarranty.app">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">TrackWarranty App</li>
+            </ol>
         </div>
     </nav>
 
@@ -92,7 +168,7 @@
                 <p class="hero-subtitle">
                     Stop losing money on expired warranties. TrackWarranty's AI scans your receipts, 
                     tracks expiry dates, and alerts you before it's too late. Because forgetting 
-                    shouldn't cost you thousands.
+                    shouldn't cost you thousands. <a href="privacy.html" style="color: rgba(255,255,255,0.9); text-decoration: underline;">Your data is secure</a> and we never share your warranty information.
                 </p>
 
                 <div class="hero-pain-points">
@@ -118,7 +194,7 @@
                                target="_blank" 
                                class="download-btn-active">
                                 <img src="playstore.svg" 
-                                     alt="Get it on Google Play" 
+                                     alt="Get TrackWarranty on Google Play Store" 
                                      class="store-badge-native">
                                 <div class="download-status-badge active">Available Now</div>
                             </a>
@@ -126,7 +202,7 @@
                             <!-- App Store Second (Coming Soon) -->
                             <div class="download-btn-inactive">
                                 <img src="app-store.svg" 
-                                     alt="Coming Soon on App Store" 
+                                     alt="TrackWarranty coming soon on Apple App Store" 
                                      class="store-badge-native disabled">
                                 <div class="download-status-badge inactive">Coming Soon</div>
                             </div>
@@ -572,7 +648,7 @@
                         <!-- Play Store First (Active) -->
                         <a href="https://play.google.com/store/apps/details?id=app.trackwarranty" target="_blank" class="download-btn-active">
                             <img src="playstore.svg" 
-                                 alt="Get it on Google Play" 
+                                 alt="Download TrackWarranty from Google Play Store" 
                                  class="store-badge-native">
                             <div class="download-status-badge active">Available Now</div>
                         </a>
@@ -580,7 +656,7 @@
                         <!-- App Store Second (Coming Soon) -->
                         <div class="download-btn-inactive">
                             <img src="app-store.svg" 
-                                 alt="Coming Soon on App Store" 
+                                 alt="TrackWarranty coming soon on Apple App Store" 
                                  class="store-badge-native disabled">
                             <div class="download-status-badge inactive">Coming Soon</div>
                         </div>
@@ -612,7 +688,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
+                        <img src="logo.jpg" alt="TrackWarranty Logo" class="logo-icon" width="32" height="32">
                         <span class="logo-text">TrackWarranty</span>
                     </div>
                     <p class="footer-tagline">
@@ -642,25 +718,26 @@
                             <li><a href="#solution">How It Works</a></li>
                             <li><a href="#download">Download App</a></li>
                             <li><a href="#problem">Why TrackWarranty</a></li>
+                            <li><a href="#enterprise">Enterprise Solutions</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-section">
-                        <br>
                         <h4>Business</h4>
                         <ul>
+                            <li><a href="partnership.html">Partnership Program</a></li>
                             <li><a href="#enterprise">Enterprise</a></li>
-                           
+                            <li><a href="https://wa.me/916207466460">Contact Sales</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-section">
-                        <br>
                         <h4>Support</h4>
                         <ul>
                             <li><a href="https://wa.me/916207466460">Contact</a></li>
-                            <li><a href="privacy.html">Privacy</a></li>
-                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="#download">Download App</a></li>
                         </ul>
                     </div>
                 </div>

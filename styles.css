@@ -110,6 +110,54 @@ body {
    NAVIGATION
    ======================================== */
 
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+    background: var(--gray-50);
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--gray-200);
+    margin-top: 80px; /* Account for fixed navbar */
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '/';
+    margin: 0 var(--space-2);
+    color: var(--gray-400);
+}
+
+.breadcrumb-item a {
+    color: var(--primary-600);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-700);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
 .navbar {
     position: fixed;
     top: 0;
