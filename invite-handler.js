@@ -145,19 +145,16 @@ class InviteHandler {
     
     getIOSDownloadButton() {
         return `
-            <div class="download-btn-inactive">
-                <img src="app-store.svg" alt="Coming Soon on App Store" class="store-badge-native disabled">
-                <div class="download-status-badge inactive">Coming Soon</div>
-            </div>
+            <span class="btn btn-outline btn-lg" aria-disabled="true" style="opacity:.6;cursor:default">App Store · coming soon</span>
         `;
     }
     
     getAndroidDownloadButton() {
         const playStoreUrl = this.buildAppStoreUrl('android');
         return `
-            <a href="${playStoreUrl}" class="download-btn-active" onclick="trackDownload('android')">
-                <img src="playstore.svg" alt="Get it on Google Play" class="store-badge-native">
-                <div class="download-status-badge active">Available Now</div>
+            <a href="${playStoreUrl}" class="btn btn-ink btn-lg store-btn download-btn-active" onclick="trackDownload('android')">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4FF3A" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9z"/></svg>
+                <span class="lbl"><small>GET IT ON</small><b>Google Play</b></span>
             </a>
         `;
     }
@@ -166,14 +163,11 @@ class InviteHandler {
         const androidUrl = this.buildAppStoreUrl('android');
         
         return `
-            <a href="${androidUrl}" class="download-btn-active" onclick="trackDownload('android')">
-                <img src="playstore.svg" alt="Get it on Google Play" class="store-badge-native">
-                <div class="download-status-badge active">Available Now</div>
+            <a href="${androidUrl}" class="btn btn-ink btn-lg store-btn download-btn-active" onclick="trackDownload('android')">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4FF3A" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 9-14 9z"/></svg>
+                <span class="lbl"><small>GET IT ON</small><b>Google Play</b></span>
             </a>
-            <div class="download-btn-inactive">
-                <img src="app-store.svg" alt="Coming Soon on App Store" class="store-badge-native disabled">
-                <div class="download-status-badge inactive">Coming Soon</div>
-            </div>
+            <span class="btn btn-outline btn-lg" aria-disabled="true" style="opacity:.6;cursor:default">App Store · coming soon</span>
         `;
     }
     

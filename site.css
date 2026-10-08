@@ -276,3 +276,47 @@ a:hover { color: var(--ink-2); }
   .marquee-track, .float { animation: none; }
   .btn, .pov { transition: none; }
 }
+
+/* Legal pages (privacy, terms) */
+.nav-links a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.legal { max-width: 880px; padding-block: 48px 96px; }
+.crumbs { font-family: var(--font-mono); font-size: 13px; color: var(--ink-2); margin-bottom: 24px; }
+.crumbs a { text-decoration: none; }
+.legal-body { background: var(--paper); border-radius: var(--r-panel); padding: 56px 56px 40px; }
+.legal-body h1 { margin: 0 0 8px; font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 6vw, 72px); line-height: 0.95; letter-spacing: -0.045em; }
+.legal-body .last-updated { display: inline-block; margin: 12px 0 32px; padding: 6px 12px; border-radius: var(--r-chip); background: var(--volt); font: 500 13px var(--font-mono); }
+.legal-body .terms-section { padding-block: 28px; border-top: 1px solid var(--line-soft); }
+.legal-body h2 { margin: 0 0 12px; font-family: var(--font-display); font-weight: 700; font-size: 26px; line-height: 1.1; letter-spacing: -0.02em; }
+.legal-body h3 { margin: 20px 0 8px; font-size: 17px; font-weight: 600; }
+.legal-body p, .legal-body li { font-size: 16px; line-height: 1.65; color: var(--ink-2); }
+.legal-body p { margin: 0 0 12px; }
+.legal-body ul { margin: 0 0 12px; padding-left: 22px; }
+.legal-body li { margin-bottom: 6px; }
+.legal-body li::marker { color: var(--ink); }
+.legal-body strong { color: var(--ink); }
+.legal-body a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.legal-body .contact-info { background: var(--bone); border-radius: 20px; padding: 20px 22px; }
+.legal-body .contact-info p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) { .legal-body { padding: 32px 22px 24px; border-radius: var(--r-card); } }
+
+/* Invite + redirect pages */
+.invite-wrap { min-height: calc(100vh - 69px); display: flex; align-items: center; justify-content: center; padding: 48px var(--gutter); }
+.invite-card { width: 100%; max-width: 520px; background: var(--paper); border-radius: var(--r-panel); padding: 44px 36px 36px; display: flex; flex-direction: column; gap: 22px; text-align: center; }
+.invite-card h1 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 9vw, 60px); line-height: 0.92; letter-spacing: -0.05em; }
+.invite-card .sub { margin: 0; font-size: 17px; color: var(--ink-2); }
+.referrer-info { background: var(--bone); border-radius: 22px; padding: 18px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.referrer-avatar { width: 56px; height: 56px; border-radius: 99px; background: var(--ink); color: var(--volt); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; font-size: 24px; }
+.referrer-name { font-weight: 600; }
+.referrer-message { color: var(--ink-2); font-size: 14px; }
+.invite-code-display { background: var(--ink); color: var(--bone); border-radius: 22px; padding: 18px; display: flex; flex-direction: column; gap: 4px; }
+.invite-code-display small { font: 12px var(--font-mono); color: var(--ink-3); }
+.invite-code-display #inviteCode { font-family: var(--font-mono); font-weight: 500; font-size: 28px; letter-spacing: 0.12em; color: var(--volt); }
+.download-buttons { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.download-buttons .btn { width: 100%; max-width: 320px; }
+.detection-status { font: 12px var(--font-mono); color: var(--ink-2); }
+.loading-spinner { width: 28px; height: 28px; margin: 8px auto; border-radius: 99px; border: 3px solid var(--muted); border-top-color: var(--ink); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.perk-list { list-style: none; margin: 0; padding: 18px 20px; background: var(--bone); border-radius: 22px; text-align: left; display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+.perk-list li { display: flex; gap: 10px; align-items: center; }
+.perk-list li::before { content: ''; width: 10px; height: 10px; flex-shrink: 0; border-radius: 3px; background: var(--volt); outline: 1.5px solid var(--ink); }
+@media (prefers-reduced-motion: reduce) { .loading-spinner { animation-duration: 2.4s; } }

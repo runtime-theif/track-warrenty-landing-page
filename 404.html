@@ -3,74 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting... | TrackWarranty</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-        .redirect-container {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            max-width: 400px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 2rem;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .redirect-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .redirect-subtext {
-            opacity: 0.8;
-            margin-bottom: 2rem;
-        }
-        .fallback-link {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-        .fallback-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-    </style>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#F3F2EC">
+    <title>Redirecting… | TrackWarranty</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap">
+    <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-    <div class="redirect-container">
-        <div class="loading-spinner"></div>
-        <div class="redirect-text">🛡️ Redirecting...</div>
-        <div class="redirect-subtext">Taking you to your TrackWarranty invitation</div>
-        <a href="/" class="fallback-link" id="fallbackLink">Continue to TrackWarranty</a>
-    </div>
+    <main class="invite-wrap" style="min-height:100vh">
+        <div class="invite-card">
+            <svg viewBox="0 0 100 100" width="64" height="64" style="margin:0 auto" aria-hidden="true"><path d="M22 8h56a10 10 0 0110 10v56L69 92 50 74 31 92 12 74V18A10 10 0 0122 8z" fill="#101114" stroke="#101114" stroke-width="4" stroke-linejoin="round"/><path d="M32 40l12 12 24-24" fill="none" stroke="#D4FF3A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h1 style="font-size:clamp(36px,8vw,52px)">One sec…</h1>
+            <p class="sub">Taking you to the right page.</p>
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <a href="/" class="btn btn-ink btn-lg" id="fallbackLink" style="align-self:center">Continue to TrackWarranty</a>
+        </div>
+    </main>
 
     <script>
         // GitHub Pages 404 redirect handler for /invite/CODE URLs
@@ -78,7 +30,6 @@
             const path = window.location.pathname;
             const search = window.location.search;
             
-            console.log('404 Handler - Path:', path, 'Search:', search);
             
             // Check if this is an /invite/CODE URL
             const inviteMatch = path.match(/^\/invite\/([A-Z0-9]+)\/?$/i);
