@@ -45,7 +45,6 @@ This document describes the complete referral system implementation for TrackWar
 ├── script.js               # Main website scripts with referral tracking
 ├── styles.css              # Updated styles with referral animations
 ├── .htaccess               # URL rewrite rules for clean URLs
-├── test-referral.html      # Comprehensive testing interface
 └── REFERRAL_SYSTEM.md      # This documentation
 ```
 
@@ -219,14 +218,8 @@ https://play.google.com/store/apps/details?id=com.trackwarranty&referrer=invite_
 
 ## 🧪 Testing
 
-### Test Interface
-Visit `/test-referral.html` for a comprehensive testing interface that includes:
-
-1. **Current Referral Data Display**
-2. **Pre-built Test Links** for different scenarios
-3. **Platform Detection Information**
-4. **Custom Link Generator**
-5. **Real-time Analytics Data**
+### Manual testing
+Open `/invite.html?code=TEST123&ref=Alex` (or `/invite/TEST123`) and check the invite code, referrer name and the Play Store `referrer` parameter.
 
 ### Test Scenarios
 ```
@@ -334,7 +327,7 @@ Pre-configured messages for different platforms:
 
 For questions about the referral system implementation:
 1. Check this documentation first
-2. Test using `/test-referral.html`
+2. Test using `/invite.html?code=TEST123&ref=Alex`
 3. Review browser console logs for debugging
 4. Check localStorage data for tracking verification
 
