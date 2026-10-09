@@ -88,6 +88,25 @@
     });
   }
 
+  // Mobile sticky download bar: show once the hero CTA scrolls away, hide near the final CTA.
+  function wireStickyCta() {
+    var bar = document.getElementById('sticky-cta');
+    var hero = document.querySelector('.hero .btn-row');
+    var end = document.getElementById('get');
+    if (!bar || !hero || !('IntersectionObserver' in window)) return;
+    document.body.classList.add('has-sticky');
+    var heroVisible = true, endVisible = false;
+    function update() {
+      var on = !heroVisible && !endVisible;
+      bar.classList.toggle('show', on);
+      bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+      var link = bar.querySelector('a');
+      if (link) link.tabIndex = on ? 0 : -1;
+    }
+    new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; update(); }).observe(hero);
+    if (end) new IntersectionObserver(function (e) { endVisible = e[0].isIntersecting; update(); }).observe(end);
+  }
+
   function setYear() {
     document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
   }
@@ -95,6 +114,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     wireDownloads();
     wireBrandsForm();
+    wireStickyCta();
     setYear();
   });
 })();

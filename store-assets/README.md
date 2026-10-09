@@ -21,35 +21,6 @@ Order matters: most visitors never scroll past the first 2–3 screenshots.
 Already copied into `receiptkeeper/frontend/assets/images/`:
 `icon.png` (1024, lime background), `adaptive-icon.png` (transparent foreground — set `android.adaptiveIcon.backgroundColor` to `#D4FF3A`), `notification-icon.png` (white silhouette), `splash-icon.png`.
 
-## Suggested listing copy
+## Listing copy
 
-**Title (30):** TrackWarranty: Warranty Vault
-
-**Short description (80):** Snap any bill. Track every warranty. Get pinged before cover ends. Works offline
-
-**Full description:**
-
-Every warranty. One vault.
-
-That bill in your drawer is worth money, until the ink fades or the warranty quietly runs out. TrackWarranty keeps every receipt and warranty in one place and reminds you before it's too late.
-
-SNAP, CONFIRM, CHILL
-• Snap a paper bill, PDF or online order screenshot
-• We read the product, store, date and warranty for you
-• Tap save. About 10 seconds per item
-
-NEVER MISS A CLAIM
-• Reminders 30, 7 and 1 day before cover ends
-• One-tap claim kit: invoice, serial, dates and brand support, ready to share on WhatsApp or email
-
-WORKS OFFLINE, PRIVATE BY DEFAULT
-• Your vault is saved on your phone first. No signal? Still works
-• No account needed to start. Sign in only if you want backup
-• No ads. Your bills are not our product
-
-MADE FOR EVERY HOME, EVERYWHERE
-• Any currency, local date formats, bills in many languages
-• Share a household vault with family or flatmates
-• Phones, laptops, ACs, fridges, TVs, headphones, furniture and more
-
-Support: vidya@repliantai.com · +91 62074 66460
+The title, short and full description, what's new, Hindi listing and data-safety notes are in [play-listing.md](play-listing.md).

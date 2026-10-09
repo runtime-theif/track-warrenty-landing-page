@@ -1,0 +1,31 @@
+# TrackWarranty
+
+> TrackWarranty is a free warranty tracker and bill keeper app. Snap a bill or receipt, and it records the product, store, purchase date and warranty length, reminds you 30, 7 and 1 day before the warranty expires, and builds a one-tap claim kit (invoice, serial number, dates, brand support). It works offline, saves data on the phone first, needs no sign-up, and supports any country and currency. Available on Android (Google Play: app.trackwarranty); iOS coming soon. TrackWarranty for Brands helps consumer electronics and appliance brands register buyers with a QR code on the box and launch and track their own warranty programs.
+
+Key facts:
+- Price: free
+- Platforms: Android (live), iOS (coming soon)
+- Core features: bill/receipt capture with automatic detection, warranty expiry reminders (30/7/1 days), one-tap claim kit, search by product/store/brand/serial, optional Google sign-in for backup and sync
+- Privacy: offline-first; data is stored on the device first and synced only if the user signs in; no ads; data is not sold
+- Coverage: any country, any currency, local date formats
+- Support: vidya@repliantai.com, +91 62074 66460
+
+## Product
+- [Home: warranty tracker app](https://trackwarranty.app/): what the app does, how it works, FAQ
+- [Get it on Google Play](https://play.google.com/store/apps/details?id=app.trackwarranty): Android app listing
+- [Best warranty tracker apps compared](https://trackwarranty.app/best-warranty-tracker-apps.html): comparison of TrackWarranty, MrReceipt, Warranty Keeper, Warranty Book and HoldMyBill
+
+## Guides
+- [Do I need a receipt for a warranty claim?](https://trackwarranty.app/guides/do-i-need-receipt-for-warranty-claim.html): what counts as proof of purchase and what to do if you lost the bill
+- [How to claim a warranty](https://trackwarranty.app/guides/how-to-claim-warranty.html): step-by-step claim checklist
+- [How to check warranty by serial number](https://trackwarranty.app/guides/check-warranty-by-serial-number.html): where to find serial numbers and official lookup pages
+- [Warranty vs guarantee](https://trackwarranty.app/guides/warranty-vs-guarantee.html): differences and consumer rights in India, the UK, the EU and the US
+- [Is an extended warranty worth it?](https://trackwarranty.app/guides/is-extended-warranty-worth-it.html): a 5-question checklist
+
+## For brands
+- [TrackWarranty for Brands](https://trackwarranty.app/brands.html): QR product registration, launch and tracking of warranty and extended warranty programs, claims validation, recalls, channel analytics for brands selling through distributors
+- [QR product registration and digital warranty cards](https://trackwarranty.app/brands/qr-product-registration.html): how QR-on-box registration works
+
+## Legal
+- [Privacy policy](https://trackwarranty.app/privacy.html)
+- [Terms and conditions](https://trackwarranty.app/terms.html)
