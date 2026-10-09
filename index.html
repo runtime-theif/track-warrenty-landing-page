@@ -99,7 +99,9 @@
         "Works offline; saved on device first",
         "No sign-up required; optional backup",
         "Any currency and country",
-        "Search by product, store, brand or serial number"
+        "Full-receipt search: find any word on any bill, even offline",
+        "Shared household vault for family and flatmates",
+        "Export to CSV, PDF report or full backup ZIP"
       ],
       "offers": {
         "@type": "Offer",
@@ -120,7 +122,9 @@
         "mainEntity": [
             { "@type": "Question", "name": "What is TrackWarranty?", "acceptedAnswer": { "@type": "Answer", "text": "TrackWarranty is a free warranty tracker and bill keeper app. Snap a bill or receipt and it reminds you 30, 7 and 1 day before the warranty expires, and builds a one-tap claim kit. It works offline, needs no sign-up, and supports any country and currency. Available on Android; iOS coming soon." } },
             { "@type": "Question", "name": "Is TrackWarranty free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tracking, reminders and claim kits are free." } },
-            { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. Start offline straight away and type in the details, or sign in for free to have bills read automatically and to back up and sync your vault." } },
+            { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. Start offline straight away and type in the details, or sign in for free to have bills read automatically, back up your vault, and share it with your household." } },
+            { "@type": "Question", "name": "Can I share TrackWarranty with my family?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Create a household in the app and share the invite code; everyone sees the bills you share. Sharing needs a free sign-in." } },
+            { "@type": "Question", "name": "Can I export my warranty data?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Export your vault as a CSV spreadsheet, a PDF report with receipt photos, or a full backup ZIP. It works offline." } },
             { "@type": "Question", "name": "What if I lose my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Turn on backup and your vault restores on any new phone when you sign in." } },
             { "@type": "Question", "name": "Does it work in my country?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It works with any currency and your local date and number formats." } }
         ]
@@ -204,7 +208,7 @@
             <article class="card pov" style="--tilt:-0.5deg">
                 <span class="eyebrow">POV</span>
                 <b>Mum bought the AC. Nobody knows where the card is.</b>
-                <span class="answer">Snap it once. Find it in a second.</span>
+                <span class="answer">One shared household vault.</span>
             </article>
         </div>
         <span class="swipe-hint" aria-hidden="true">SWIPE →</span>
@@ -265,9 +269,9 @@
                 <p>Days before cover ends. That's it.</p>
             </div>
             <div class="card">
-                <div class="chips" aria-hidden="true"><span class="chip-btn on">Phone</span><span class="chip-btn">AC</span><span class="chip-btn">TV</span><span class="chip-btn">Sofa</span></div>
-                <h3 class="h-card">Every kind of product</h3>
-                <p>Phones, laptops, TVs, ACs, fridges, sofas. Track AMC and compressor dates too.</p>
+                <div style="display:flex" aria-hidden="true"><span style="width:44px;height:44px;border-radius:99px;background:#D4FF3A;border:3px solid #fff"></span><span style="width:44px;height:44px;border-radius:99px;background:#101114;border:3px solid #fff;margin-left:-12px"></span><span style="width:44px;height:44px;border-radius:99px;background:#FF5B23;border:3px solid #fff;margin-left:-12px"></span></div>
+                <h3 class="h-card">Household vault</h3>
+                <p>Share with family or flatmates. Everyone finds every bill.</p>
             </div>
             <div class="card">
                 <span class="big-num" style="font-size:clamp(26px,7vw,44px);letter-spacing:-0.02em;white-space:nowrap">₹ $ € £ ¥</span>
@@ -275,9 +279,9 @@
                 <p>Any currency, local date and number formats.</p>
             </div>
             <div class="card">
-                <span class="mini-row" style="background:#F3F2EC;border-radius:999px;justify-content:flex-start;color:#4A4C52">⌕ "croma"</span>
+                <span class="mini-row" style="background:#F3F2EC;border-radius:999px;justify-content:flex-start;color:#4A4C52">⌕ "AMC 2 yrs"</span>
                 <h3 class="h-card">Find any bill in a second</h3>
-                <p>Search by product, store, brand or serial number.</p>
+                <p>Every word on every receipt is searchable, even offline.</p>
             </div>
         </div>
     </section>
@@ -293,7 +297,7 @@
                 <div class="mini-card"><b>Works offline</b><span>Add, search, claim. No signal needed.</span></div>
                 <div class="mini-card"><b>Optional backup</b><span>Turn on when you want it.</span></div>
                 <div class="mini-card"><b>No ads, no selling</b><span>Your bills are not our product.</span></div>
-                <div class="mini-card"><b>No account needed</b><span>Start in one tap. Sign in only for backup.</span></div>
+                <div class="mini-card"><b>Export anytime</b><span>CSV, PDF report or full backup ZIP.</span></div>
             </div>
         </div>
     </section>
@@ -303,6 +307,8 @@
         <details open><summary>What is TrackWarranty?</summary><p>TrackWarranty is a free warranty tracker and bill keeper app. You snap a bill or receipt, it reads the product, store, purchase date and warranty length, and reminds you 30, 7 and 1 day before the warranty expires. It also builds a one-tap claim kit with the invoice and serial number. It works offline, saves to your phone first, needs no sign-up, and supports any country and currency. It is available on Android, with iOS coming soon.</p></details>
         <details><summary>Is it really free?</summary><p>Yes. Tracking, reminders and claim kits are free.</p></details>
         <details><summary>Do I need an account?</summary><p>No. Start offline straight away and type in the details, or sign in for free to have bills read automatically and to back up and sync your vault.</p></details>
+        <details><summary>Can I share it with my family?</summary><p>Yes. Create a household in the app and share the invite code. Everyone sees the bills you share, and each person can still keep private items. Sharing needs a free sign-in.</p></details>
+        <details><summary>Can I export my data?</summary><p>Yes. Export your whole vault as a CSV spreadsheet, a PDF report with receipt photos, or a full backup ZIP with every receipt file. It works offline.</p></details>
         <details><summary>What if I lose my phone?</summary><p>Turn on backup and your vault restores on any new phone when you sign in.</p></details>
         <details><summary>Does it work in my country?</summary><p>Yes. It works with any currency and your local date and number formats. Warranties are a household problem everywhere.</p></details>
         <details><summary>I'm a brand. Can I use this for my products?</summary><p>Yes. <a href="brands.html">TrackWarranty for Brands</a> lets you register buyers with a QR on the box and run your own warranty programs.</p></details>

@@ -243,7 +243,7 @@ PAGES = [
   <div class="table-wrap"><table class="prog-table" style="min-width:680px">
     <thead><tr><th>App</th><th>Platforms</th><th>Focus</th><th>Good for</th></tr></thead>
     <tbody>
-      <tr><td><b>TrackWarranty</b></td><td>Android (iOS coming)</td><td>Warranty vault: bills, expiry reminders, claim kit, works offline</td><td>Getting reminded before cover ends, without an account</td></tr>
+      <tr><td><b>TrackWarranty</b></td><td>Android (iOS coming)</td><td>Warranty vault: bills, expiry reminders, claim kit, full-receipt search, household sharing, CSV/PDF export, works offline</td><td>Getting reminded before cover ends, and sharing bills with family</td></tr>
       <tr><td><b>MrReceipt</b></td><td>Android, iOS</td><td>Receipts, deals, expenses and product info</td><td>Receipts and shopping deals in one app</td></tr>
       <tr><td><b>Warranty Keeper</b></td><td>Android</td><td>Store warranties in the cloud</td><td>A simple warranty list with cloud backup</td></tr>
       <tr><td><b>Warranty Book</b></td><td>Android, iOS</td><td>Warranty bills and purchase receipts; seller and support contacts</td><td>Indian households tracking bills</td></tr>
@@ -265,7 +265,7 @@ PAGES = [
 </section>
 <section class="terms-section">
   <h2>Why we built TrackWarranty</h2>
-  <p>Most people don't lose warranties because they lack storage. They lose them because nobody reminds them in time. TrackWarranty is built around the reminder and the claim: add a bill in seconds, get nudged 30, 7 and 1 day before cover ends, and send a ready-made claim kit in one tap. It saves to your phone first, so it works offline and without signing up.</p>
+  <p>Most people don't lose warranties because they lack storage. They lose them because nobody reminds them in time. TrackWarranty is built around the reminder and the claim: add a bill in seconds, get nudged 30, 7 and 1 day before cover ends, and send a ready-made claim kit in one tap. Every word on every receipt is searchable, you can share a household vault with family, and you can export everything as CSV, PDF or a backup ZIP. It saves to your phone first, so it works offline and without signing up.</p>
 </section>''',
         'faq': [
             ('What is the best app to keep track of warranties?', 'It depends on what you need. For reminders before expiry with offline storage and no sign-up, TrackWarranty. For receipts plus shopping deals, MrReceipt. For a simple cloud list, Warranty Keeper.'),

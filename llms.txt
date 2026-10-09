@@ -5,7 +5,7 @@
 Key facts:
 - Price: free
 - Platforms: Android (live), iOS (coming soon)
-- Core features: bill/receipt capture with automatic detection, warranty expiry reminders (30/7/1 days), one-tap claim kit, search by product/store/brand/serial, optional Google sign-in for backup and sync
+- Core features: bill/receipt capture with automatic detection, warranty expiry reminders (30/7/1 days), one-tap claim kit, full-receipt search (every word on every bill, works offline), shared household vault for family, export to CSV / PDF report / backup ZIP, optional Google sign-in for backup and sync
 - Privacy: offline-first; data is stored on the device first and synced only if the user signs in; no ads; data is not sold
 - Coverage: any country, any currency, local date formats
 - Support: vidya@repliantai.com, +91 62074 66460

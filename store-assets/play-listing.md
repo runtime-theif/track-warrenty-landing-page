@@ -37,8 +37,22 @@ WARRANTY REMINDERS THAT ACTUALLY HELP
 • Track extended warranty and AMC end dates the same way
 
 ONE-TAP CLAIM KIT
-• Product, serial number, purchase date, warranty end date and the bill, ready to share
+• Product, serial number, purchase date, warranty end date and the bill, ready to share as a PDF
 • Send it on WhatsApp, email or any app when you call the service centre
+
+FIND ANY BILL IN A SECOND
+• Full-receipt search: every word on every bill is searchable, even offline
+• Search "AMC", a store, a serial number or a model and jump straight to the right receipt
+• Add notes to any item
+
+SHARE WITH YOUR HOUSEHOLD
+• Create a household vault and invite family or flatmates with a code
+• Everyone sees the bills you share; keep anything else private
+• Whoever bought the fridge, everyone can find the bill
+
+EXPORT ANYTIME
+• Export your vault as a CSV spreadsheet, a PDF report with receipt photos, or a full backup ZIP
+• Save to Drive or send by email; handy for insurance, moving house or tax time
 
 WORKS OFFLINE, PRIVATE BY DEFAULT
 • Your vault is saved on your phone first, so it opens instantly, even with no internet
@@ -46,7 +60,6 @@ WORKS OFFLINE, PRIVATE BY DEFAULT
 • No ads. Your bills are not our product
 
 MADE FOR EVERY HOME
-• Search by product, store, brand or serial number
 • Works with any currency and local date formats
 
 WHY PEOPLE USE TRACKWARRANTY
@@ -71,6 +84,9 @@ A brand-new TrackWarranty:
 • Add a bill in a few taps, no account needed
 • Reminders 30, 7 and 1 day before a warranty ends
 • One-tap claim kit to share with service centres
+• Search every word on every receipt
+• Share a household vault with family
+• Export to CSV, PDF or a backup ZIP
 • Faster, smoother and more reliable sync when you sign in
 ```
 
@@ -89,6 +105,9 @@ TrackWarranty एक मुफ़्त वारंटी ट्रैकर �
 • ऑफ़लाइन काम करता है, डेटा पहले आपके फ़ोन में सेव होता है
 • शुरू करने के लिए अकाउंट ज़रूरी नहीं
 • एक्सटेंडेड वारंटी और AMC की तारीखें भी ट्रैक करें
+• रसीद का हर शब्द सर्च करें, ऑफ़लाइन भी
+• परिवार के साथ घरेलू वॉल्ट शेयर करें
+• CSV, PDF रिपोर्ट या बैकअप ZIP में एक्सपोर्ट करें
 • कोई विज्ञापन नहीं
 
 मोबाइल, लैपटॉप, TV, AC, फ्रिज, वॉशिंग मशीन, हेडफ़ोन, सब की वारंटी एक जगह।
@@ -105,5 +124,5 @@ TrackWarranty एक मुफ़्त वारंटी ट्रैकर �
 ## Other listing settings
 - **Category:** Tools (or Productivity). **Tags:** Receipt, Bill organizer, Reminders
 - **Contact email:** vidya@repliantai.com · **Website:** https://trackwarranty.app · **Privacy policy:** https://trackwarranty.app/privacy.html
-- **Data safety form:** match the updated privacy policy: data stored on device; synced to servers only when signed in; receipt images are sent to servers for scanning when signed in; no data sold; no ads.
+- **Data safety form:** match the updated privacy policy: data stored on device; synced to servers only when signed in; receipt images are sent to servers for scanning when signed in; on-device text recognition for search; items shared to a household are visible to its members; no data sold; no ads.
 - **Ratings:** the current 3.9 rating from a few reviews is the biggest conversion drag. Add an in-app review prompt after the first reminder or claim kit is used.
